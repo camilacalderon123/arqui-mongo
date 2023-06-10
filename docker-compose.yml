@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - 27017:27017
+  atlas:
+    image: mongo:4.4
+    ports:
+      - 27018:27017
+  atlas-admin:
+    build: ./atlas-admin
+    ports:
+      - 8080:80
+    depends_on:
+      - mongodb
+      - atlas
+volumes:
+  mongodb_data:
