@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+
+<style>
+    .sobreNosotros {
+        font-size: 18px;
+    }
+
+    .fadeInUp h5 {
+        font-size: 22px;
+    }
+</style>
+
+
+
+<div layout:fragment="content">
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-header  border-info text-center">
+                            <h2 class="titulo-inicio"><b>Bienvenido al Juego</b> </h2>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <h3 class="text-center titulo-inicio" style="color:#dc3545"> <b> Ultimate Brain</b></h3>
+
+                            <div class="card-body">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                                                aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img  th:src="@{/imagenes/juego8.jpg}"  alt="First slide" style="filter:brightness(40%)" height="340px"
+                                                 class="d-block w-100">
+                                            <div class="carousel-caption d-flex flex-column justify-content-center h-100 txt-carousel">
+                                                <h2 class="tittle-carrusel titulo-inicio">Aquí podras aprender todo sobre cultura general y divertirte.</h2>
+
+                                                <div class="boton">
+                                                    <a asp-area="" asp-controller="Participantes" asp-action="Registrar" class="btn  btn-danger ">Jugar</a>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img th:src="@{/imagenes/juego7.jpg}"  style="filter:brightness(40%)" alt="Second slide" height="340px"
+                                                 class="d-block w-100">
+                                            <div class="carousel-caption d-flex flex-column justify-content-center h-100 txt-carousel">
+                                                <h2 class="tittle-carrusel titulo-inicio ">Podrás ganar premios 🎁.</h2>
+                                                <div class="boton">
+                                                    <a asp-area="" asp-controller="Participantes" asp-action="Registrar" class="btn  btn-danger">Jugar</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img  th:src="@{/imagenes/juego.jpg}"  style="filter:brightness(40%)" alt="Third slide" height="340px"
+                                                 class="d-block w-100">
+                                            <div class="carousel-caption d-flex flex-column justify-content-center h-100 txt-carousel">
+                                                <h2 class="tittle-carrusel titulo-inicio">¡Ampliarás tus conocimientos!</h2>
+                                                <div class="boton">
+                                                    <a asp-area="" asp-controller="Participantes" asp-action="Registrar" class="btn  btn-danger">Jugar</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                            data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+
+
+
+
+
+
+    <section class="content mt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-header  border-info">
+                            <h2 class="titulo-inicio"><b>Temas de Ultimate Brain</b> </h2>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <div class="card-body">
+                                <div class="row g-4">
+                                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="service-item text-center pt-3">
+                                            <div class="p-4">
+                                                <i class="fas fa-3x fa-smile text-danger mb-4"></i>
+                                                <h5 class="mb-3">Diversión</h5>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="service-item text-center pt-3">
+                                            <div class="p-4">
+                                                <i class="fa fa-3x fa-search text-danger mb-4"></i>
+                                                <h5 class="mb-3">Cultura general</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="service-item text-center pt-3">
+                                            <div class="p-4">
+                                                <i class="fas fa-3x fa-award text-danger mb-4"></i>
+                                                <h5 class="mb-3">Gana Premios</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                                        <div class="service-item text-center pt-3">
+                                            <div class="p-4">
+                                                <i class="fa fa-3x fa-play-circle text-danger mb-4"></i>
+                                                <h5 class="mb-3">Juego intuitivo</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+
+
+
+    <section class="content mt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-header  border-info">
+                            <h2 class="titulo-inicio"><b>Sobre nosotros</b> </h2>
+
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+
+                            <!-- About Start -->
+                            <div class="container-xxl py-5">
+                                <div class="container">
+                                    <div class="row g-5">
+
+                                        <div class="col-lg-6 wow fadeInUp sobreNosotros" data-wow-delay="0.3s">
+                                            <p class="mb-4">
+                                                Somos un gran equipo de ingenieros de sistemas que ha desarrollado este gran juego ULTIMATE BRAIN para dar alegría a las personas y
+                                                facilitar el aprendizaje acerca de la cultura general.
+                                            </p>
+                                            <div class="row gy-2 gx-4 mb-4">
+                                                <div class="col-sm-6">
+                                                    <p class="mb-0"><i class="fa fa-arrow-right text-danger me-2"></i>Jarlin Fonseca</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="mb-0"><i class="fa fa-arrow-right text-danger me-2"></i>Camila Calderón</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="mb-0"><i class="fa fa-arrow-right text-danger me-2"></i>Don Brayan Galván</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="mb-0"><i class="fa fa-arrow-right text-danger me-2"></i>Juan Amaya</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="mb-0"><i class="fa fa-arrow-right text-danger me-2"></i>Yoel Castilla</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <p class="mb-0"><i class="fa fa-arrow-right text-danger me-2"></i>Ing. Milton Vera Contreras</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="height: 400px;">
+                                            <div class="position-relative h-100">
+                                                <img class="img-fluid position-absolute " th:src="@{/imagenes/equipo.jpg}"  alt="" style="object-fit: cover;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- About End -->
+
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+
+    <div class="text-center mt-2 ">
+        <a href="#arriba" class="btn-circle p-3 rounded-circle  btn-info "><i class='fa fa-arrow-up'></i></a>
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
