@@ -20,4 +20,17 @@ public class Show {
     public String login(){
         return "login";
     }
+
+    @RequestMapping("/databases")
+    public String databases(){
+        return "databases";
+    }
+
+    @RequestMapping("/commands")
+    public String commands(){
+        return "commands";
+    }
+
+
+
 }
