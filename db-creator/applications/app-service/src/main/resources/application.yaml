@@ -11,6 +11,9 @@ spring:
       path: "/h2"
   profiles:
     include: null
+  data:
+    mongodb:
+      uri: "mongodb://localhost:27017/test"
 adapter:
   restconsumer:
     timeout: 5000
