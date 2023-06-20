@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.utraq.net.nz/thymeleaf/layout">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Arqui</title>
+
+
+  <!-- Font Awesome -->
+  <!--<link rel="stylesheet"  href="../static/plugins/fontawesome-free/css/all.min.css">-->
+  <link rel="stylesheet" th:href="@{/plugins/fontawesome-free/css/all.min.css}" />
+
+  <!-- DataTables -->
+  <link rel="stylesheet" th:href="@{/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
+  <link rel="stylesheet" th:href="@{/plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
+  <link rel="stylesheet" th:href="@{/plugins/datatables-buttons/css/buttons.bootstrap4.min.css}">
+
+
+  <!-- Theme style -->
+ <!-- <link rel="stylesheet" href="../static/css/adminlte.min.css">-->
+  <link rel="stylesheet" th:href="@{/css/adminlte.min.css}" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet"  th:href="@{/css/participantes.css}"  asp-append-version="true" />
+  <link rel="stylesheet" th:href="@{/css/estilo-inicio.css}"  asp-append-version="true" />
+  <link rel="stylesheet" th:href="@{/css/test.css}" />
+
+  <link rel="stylesheet" th:href="@{/css/card.css}"/>
+
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+
+  <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+
+
+  <style>
+        /*** Service ***/
+        .service-item {
+            background: var(--light);
+            transition: .5s;
+        }
+
+            .service-item:hover {
+                margin-top: -10px;
+                background: var(--danger);
+            }
+
+            .service-item * {
+                transition: .5s;
+            }
+
+            .service-item:hover * {
+                color: var(--light) !important;
+            }
+    </style>
+
+
+
+</head>
+
+<a name="arriba"></a>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark navbar-danger">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item color">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+
+
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+
+      <li class="nav-item">
+
+        <a class="nav-link" data-slide="true" role="button"
+           asp-area="" asp-controller="Home" asp-action="Index">
+          <i class="fa fa-home"></i>
+
+          <form action="#" method="post" id="logout">
+          </form>
+
+        </a>
+
+      </li>
+    </ul>
+  </nav>
+  <!-- ./Navbar -->
+  <!-- /.Navbar -->
+  <!-- Main Sidebar Container -->
+  <!-- Main Sidebar -->
+  <aside class="main-sidebar sidebar-light-danger elevation-4 sidebar-no-expand " id="sidebar">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link navbar-danger text-light">
+                <span class="logoMini ">
+                    MONGODB
+                </span>
+      <span class="brand-text font-weight-light ">STUDENT</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar ">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center">
+     <!--     <div class="image">
+
+      </div>
+-->
+
+        <img th:src="@{/imagenes/iconmongo.png}"  class="img-circle img-fluid" alt="User Image">
+<!--             <div class="info">
+        <a href="#" class="d-block">{{ user }}</a>
+      </div>-->
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search" data-highlight-class='text-dark'
+             data-not-found-text='No encontrado'>
+          <input class="form-control form-control-sidebar" type="search" placeholder="Buscar"
+                 aria-label="Search" highlightClass="text-dark">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+            data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+          <li class="nav-item">
+            <a  th:href="@{/index}" class="nav-link">
+              <em class="nav-icon fa fa-home"></em>
+              <p>
+                Home
+              </p>
+            </a>
+
+          </li>
+
+
+          <li class="nav-item">
+            <a th:href="@{/databases}" class="nav-link">
+              <em class="nav-icon fa fa-database"></em>
+              <p>
+                Base de Datos
+              </p>
+            </a>
+
+          </li>
+
+          <li class="nav-item">
+            <a th:href="@{/commands}"class="nav-link">
+              <em class="nav-icon fa fa-terminal"></em>
+              <p>
+                Comandos
+              </p>
+            </a>
+
+          </li>
+
+
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+  <!-- ./Main Sidebar -->
+  <!-- ./Main Sidebar -->
+  <!-- Content Wrapper. Contains page content -->
+
+
+  <div class="content-wrapper">
+    <br>
+    <div layout:fragment="content">
+
+
+
+    </div>
+
+    <br>
+  </div>
+  <!-- /.content-wrapper -->
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Versión</b> 1.0
+    </div>
+    <strong>  &copy; 2023 - UltimateBrain - Arquitectura de Software </strong>
+  </footer>
+
+  <!-- -/Footer -->
+
+
+</div>
+<!-- ./wrapper -->
+<!-- jQuery -->
+<!--<script src="../static/plugins/jquery/jquery.min.js"></script>-->
+<script  th:src="@{/plugins/jquery/jquery.min.js}"></script>
+
+<th:block layout:fragment="script"></th:block>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+
+<!-- Bootstrap 4 -->
+<script   th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<!-- AdminLTE App -->
+<!--    <script src="adminlte/dist/js/adminlte.min.js"></script> -->
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous">
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+
+
+</body>
+
+</html>
+
