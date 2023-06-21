@@ -11,8 +11,9 @@
 1. [Descripción General](#descripción-del-proyecto)
 2. [Replicación en Local](#-cómo-clonar-el-proyecto)
 3. [Requerimientos](#requerimientos-del-proyecto)
-4. [Arquitectura](#arquitectura)
-5. [Acerca de nosotros](#equipo)
+4. [Justificación de Arquitectura](#justificación-de-la-elección-de-la-Arquitectura)
+5. [Arquitectura](#arquitectura)
+6. [Acerca de nosotros](#equipo)
 
 ## Descripción del Proyecto
 
@@ -34,7 +35,7 @@ El proyecto consiste en desarrollar una aplicación web basada en MongoDB que of
 - Usabilidad: La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar. Debe proporcionar una experiencia de usuario agradable y eficiente para realizar las operaciones de gestión de bases de datos.
 - Experiencia de usuario fluida: La aplicación debe ofrecer una experiencia de usuario fluida y sin interrupciones. Los tiempos de carga deben ser rápidos y las transiciones entre páginas o secciones deben ser suaves y sin retrasos perceptibles.
 
-## Justificación de la elección de la Arquitectura 
+# Justificación de la elección de la Arquitectura 
 <p align="center">
 <img src="https://github.com/camilacalderon123/arqui-mongo/assets/80492180/dffbe5a8-e719-4f7f-92a7-de52d71620aa" height="500"  />
 </p>
