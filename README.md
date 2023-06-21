@@ -12,7 +12,7 @@
 2. [Replicación en Local](#-cómo-clonar-el-proyecto)
 3. [Requerimientos](#requerimientos-del-proyecto)
 4. [Justificación de Arquitectura](#justificación-de-la-elección-de-la-Arquitectura)
-5. [Arquitectura](#arquitectura)
+5. [Arquitectura](#Arquitectura-cliente-servidor)
 6. [Acerca de nosotros](#equipo)
 
 ## Descripción del Proyecto
@@ -36,10 +36,11 @@ El proyecto consiste en desarrollar una aplicación web basada en MongoDB que of
 - Experiencia de usuario fluida: La aplicación debe ofrecer una experiencia de usuario fluida y sin interrupciones. Los tiempos de carga deben ser rápidos y las transiciones entre páginas o secciones deben ser suaves y sin retrasos perceptibles.
 
 # Justificación de la elección de la Arquitectura 
+
+## Arquitectura Cliente - Servidor
 <p align="center">
 <img src="https://github.com/camilacalderon123/arqui-mongo/assets/80492180/dffbe5a8-e719-4f7f-92a7-de52d71620aa" height="500"  />
 </p>
-
 
 La elección de implementar una arquitectura cliente-servidor, donde una aplicación de Spring Boot actúa como el cliente y un contenedor de Docker con MongoDB actúa como el servidor, se respaldada en varias ventajas significativas que impactarán positivamente en el rendimiento, la escalabilidad y la eficiencia del sistema.
 
@@ -49,7 +50,7 @@ La elección de implementar una arquitectura cliente-servidor, donde una aplicac
 
 - Otra ventaja es la facilidad de mantenimiento y actualización. Al separar claramente el cliente y el servidor, se pueden realizar cambios y mejoras en la aplicación de Spring Boot sin afectar la infraestructura del servidor. 
 
-# Arquitectura
+##  Diseño de Arquitectura Limpia(Clean Code)
 
 Empezaremos por explicar los diferentes componentes del proyectos y partiremos de los componentes externos, continuando con los componentes core de negocio (dominio) y por último el inicio y configuración de la aplicación.
 
