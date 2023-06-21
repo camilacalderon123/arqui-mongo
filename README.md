@@ -12,7 +12,7 @@
 2. [Replicación en Local](#-cómo-clonar-el-proyecto)
 3. [Requerimientos](#requerimientos-del-proyecto)
 4. [Justificación de Arquitectura](#justificación-de-la-elección-de-la-Arquitectura)
-5. [Arquitectura](#Arquitectura-cliente-servidor)
+5. [Arquitectura](#arquitectura-cliente---servidor)
 6. [Acerca de nosotros](#equipo)
 
 ## Descripción del Proyecto
