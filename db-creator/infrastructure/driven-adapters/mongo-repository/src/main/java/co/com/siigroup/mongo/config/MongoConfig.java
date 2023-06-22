@@ -43,6 +43,6 @@ public class MongoConfig {
 
     @Bean
     public ReactiveMongoTemplate reactiveMongoTemplate(MongoClient mongoProperties) {
-        return new ReactiveMongoTemplate(mongoProperties, "test");
+        return new ReactiveMongoTemplate(mongoProperties, "estudiante");
     }
 }

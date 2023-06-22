@@ -12,4 +12,8 @@ public class CommandsExecutorUseCase {
     public Mono<String> execute(String command) throws Exception {
        return repository.run(command);
     }
+
+    public Mono<String> executeCommand(String command) throws Exception {
+        return repository.runCommand(command);
+    }
 }

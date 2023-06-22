@@ -13,8 +13,13 @@ public class ApiRest {
     private final CommandsExecutorUseCase useCase;
 
 
-    @GetMapping(path = "/commands/{dbName}")
-    public Mono<String> commandName(@PathVariable String dbName) throws Exception {
+    @PostMapping(path = "/createDocument")
+    public Mono<String> commandName(@RequestParam("dbName") String dbName) throws Exception {
       return useCase.execute(dbName);
+    }
+
+    @PostMapping(path = "/executeCommand")
+    public Mono<String> execute(@RequestParam("command") String command) throws Exception {
+        return useCase.executeCommand(command);
     }
 }
