@@ -28,19 +28,21 @@
              <!-- <h3 class="text-center titulo-inicio" style="color:#dc3545"> <b> Ultimate Brain</b></h3>-->
               <h5>Para crear una base de datos a continuación escriba el nombre de la BD que quieres crear:</h5>
 
-              <form action="#" method="POST" class="mt-4">
+              <form id="createDocument" class="mt-4">
 
 
                 <div class="form-group">
                  <!-- <label class="form-label">Base de Datos:</label>-->
-                  <input class="form-control form-control-lg" type="text" placeholder="Nombre de Base de datos">
+                  <input id="dbNameInput" class="form-control form-control-lg" type="text" placeholder="Nombre de Base de datos">
                 </div>
 
-
+                  <div id="successMessage" style="display: none;">
+                      <p>Se creo el documento correctamente</p>
+                  </div>
                 <!-- Submit -->
                 <div class="mt-4">
                   <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="submit" class="btn btn-danger" >Crear</button>
+                    <button type="button" class="btn btn-danger" onclick="submitForm()" >Crear</button>
                   </div>
                 </div>
                 <!-- ./Submit -->
@@ -64,74 +66,11 @@
     <!-- /.container-fluid -->
   </section>
 
-
-
-  <!-- Main content -->
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-
-            <div class="card-header  border-info text-center">
-              <h2 class="titulo-inicio"><b>Ver Bases de Datos</b> </h2>
-
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-                <div class="table-responsive">
-
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <!--           @forelse ($items as $item)-->
-                        <tr>
-                            <td>1</td>
-                            <td>Arquitectura</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Arquitectura 2</td>
-                        </tr>
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-
-
-
-
-
-            </div>
-
-
-          </div>
-          <!-- /.card -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container-fluid -->
-  </section>
-
-
-
-
-
-
-
 </div>
 
 <th:block layout:fragment="script">
   <script th:src="@{/js/accounts.js}"></script>
+    <script th:src="@{/js/consumeService.js}"></script>
   <!-- DataTables  & Plugins -->
   <script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
   <script th:src="@{/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>

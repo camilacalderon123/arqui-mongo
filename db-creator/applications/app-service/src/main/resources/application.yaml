@@ -13,7 +13,7 @@ spring:
     include: null
   data:
     mongodb:
-      uri: "mongodb://localhost:27017/test"
+      uri: "mongodb://localhost:32768/test"
 adapter:
   restconsumer:
     timeout: 5000

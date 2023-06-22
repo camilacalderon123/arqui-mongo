@@ -28,19 +28,21 @@
               <!-- <h3 class="text-center titulo-inicio" style="color:#dc3545"> <b> Ultimate Brain</b></h3>-->
               <h5>Escribe los comandos que deseas ejecutar:</h5>
 
-              <form action="#" method="POST" class="mt-4">
+              <form id="executeComand" class="mt-4">
 
 
                 <div class="form-group">
                   <!-- <label class="form-label">Base de Datos:</label>-->
-                  <input class="form-control form-control-lg" type="text" placeholder="Nombre de Base de datos">
+                  <input id="comands" class="form-control form-control-lg" type="text" placeholder="Comando con estructura DatabaseName:command:collectionName">
                 </div>
 
-
+                <div id="successMessageCommand" style="display: none;">
+                  <p>Se ejecuto el comando correctamente correctamente</p>
+                </div>
                 <!-- Submit -->
                 <div class="mt-4">
                   <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="submit" class="btn btn-danger" >Ejecutar</button>
+                    <button type="button" class="btn btn-danger" onclick="sendToExecute()">Ejecutar</button>
                   </div>
                 </div>
                 <!-- ./Submit -->
@@ -73,6 +75,7 @@
 
 <th:block layout:fragment="script">
   <script th:src="@{/js/accounts.js}"></script>
+  <script th:src="@{/js/consumeService.js}"></script>
   <!-- DataTables  & Plugins -->
   <script th:src="@{/plugins/datatables/jquery.dataTables.min.js}"></script>
   <script th:src="@{/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
